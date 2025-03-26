@@ -36,3 +36,5 @@ jobs:
           source _miniconda_dir/etc/profile.d/conda.sh
           conda init
           conda activate
+          ls -la
+          pytest unittesting.py
