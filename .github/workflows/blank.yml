@@ -37,4 +37,5 @@ jobs:
           conda init
           conda activate
           ls -la
+          pip install -U pytest
           pytest unittesting.py
