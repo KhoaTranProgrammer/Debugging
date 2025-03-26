@@ -34,7 +34,10 @@ def run_TC(tcname, graph_data, expect):
     else:
         failed_TC = failed_TC + 1
         print(f'Test cases {tcname} is FAILED')
-        print(inf1)
+        try:
+            print(inf1)
+        except:
+            pass
 
 def testaccuracy():
     global total_TC
