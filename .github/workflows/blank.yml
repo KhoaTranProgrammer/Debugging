@@ -38,4 +38,7 @@ jobs:
           conda activate
           ls -la
           pip install -U pytest
+          pip install numpy
+          pip install onnx
+          pip install onnxruntime
           pytest unittesting.py
