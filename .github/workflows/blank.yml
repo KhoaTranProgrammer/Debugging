@@ -42,3 +42,10 @@ jobs:
           pip install onnx
           pip install onnxruntime
           pytest unittesting.py
+          
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@v4
+        with:
+            name: my-artifact
+            path: unittesting.py
+            retention-days: 5
