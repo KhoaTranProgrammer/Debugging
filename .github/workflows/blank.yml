@@ -42,7 +42,7 @@ jobs:
           pip install onnx
           pip install onnxruntime
           pytest unittesting.py | tee testlog.log
-          if grep -Fxq "FAILED unittesting.py::testaccuracy" testlog.log
+          if grep "FAILED unittesting.py::testaccuracy" testlog.log
           then
               echo "JOB is FAILED"
               exit 1
