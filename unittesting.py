@@ -24,7 +24,11 @@ def run_TC(tcname, graph_data, expect):
             if (result == expect[outputs[index]]["data"]).all():
                 pass
             else:
-                status = False
+                # Compare float32
+                if np.allclose(np.array(result), np.array(expect[outputs[index]]["data"]), atol=1e-5):
+                    pass
+                else:
+                    status = False
     except:
         status = False
 
