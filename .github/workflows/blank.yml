@@ -44,8 +44,10 @@ jobs:
           pytest unittesting.py | tee testlog.log
           if grep -Fxq "FAILED unittesting.py::testaccuracy" testlog.log
           then
+              echo "JOB is FAILED"
               exit 1
           else
+              echo "JOB is PASSED"
               exit 0
           fi
           
