@@ -37,9 +37,10 @@ jobs:
           conda init
           conda activate
           conda env create --file .github/workflows/default.yml
+          conda activate Python_3.11.5
           pip install -U pytest
           pip install numpy
-          pip install onnx==1.16.1
+          pip install onnx
           pip install onnxruntime
           pytest unittesting.py | tee testlog.log
           if grep "FAILED unittesting.py::testaccuracy" testlog.log
