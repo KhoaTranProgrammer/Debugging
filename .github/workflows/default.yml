@@ -89,4 +89,3 @@ dependencies:
       - protobuf==6.30.2
       - pytest==8.3.5
       - sympy==1.14.0
-prefix: /home/khoa/FFMPEGALLBUILD/Miniconda3
