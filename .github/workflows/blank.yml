@@ -30,10 +30,10 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          pip install -U pytest
-          pip install numpy
-          pip install onnx
-          pip install onnxruntime
+          pip install -U pytest==8.3.5
+          pip install numpy==2.2.5
+          pip install onnx==1.17.0
+          pip install onnxruntime==1.21.0
           pytest unittesting.py | tee testlog.log
           if grep "FAILED unittesting.py::testaccuracy" testlog.log
           then
